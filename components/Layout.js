@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import { AppBar, Toolbar, Typography, Container } from "@mui/material";
+import useStyles from "../utils/styles";
 const Layout = ({ children }) => {
   return (
     <div>
@@ -13,6 +14,9 @@ const Layout = ({ children }) => {
         </Toolbar>
       </AppBar>
       <Container>{children}</Container>
+      <footer>
+        <Typography>All Right reserve</Typography>
+      </footer>
     </div>
   );
 };
