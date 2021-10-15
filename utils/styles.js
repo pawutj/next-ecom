@@ -1,4 +1,4 @@
-import { makeStyles } from "@mui/material";
+import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
   navbar: {
