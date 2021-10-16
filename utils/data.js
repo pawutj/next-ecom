@@ -20,7 +20,7 @@ const data = {
       rating: 4.3,
       numReviews: 10,
       countInStock: 20,
-      description: "A popular shirt",
+      description: "Smart shirt",
     },
     {
       name: "Shirt+",
