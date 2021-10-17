@@ -3,6 +3,15 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Layout from "../components/Layout";
 import { useEffect } from "react";
+import {
+  Grid,
+  Card,
+  CardActionArea,
+  CardMedia,
+  Typography,
+  Button,
+} from "@material-ui/core";
+import { data } from "../utils/data";
 export default function Home() {
   useEffect(() => {
     const jssStyles = document.querySelector("#jss-server-side");
@@ -14,10 +23,25 @@ export default function Home() {
     <Layout>
       <div>
         <h1>Products</h1>
-        <ul>
-          <li>Product 1</li>
-          <li>Product 2</li>
-        </ul>
+        <Grid container spacing={3}>
+          {data.products.map((product) => (
+            <Grid item md={4} key={product.name}>
+              <Card>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    image={product.image}
+                    title={product.title}
+                  ></CardMedia>
+                </CardActionArea>
+                <Typography>${product.price}</Typography>
+                <Button size="small" color="primary">
+                  Add to Cart
+                </Button>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       </div>
     </Layout>
   );
