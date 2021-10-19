@@ -12,9 +12,11 @@ import {
   Button,
   CardContent,
   CardActions,
+  Link,
 } from "@material-ui/core";
 import { data } from "../utils/data";
 import { getCardActionsUtilityClass } from "@mui/material";
+import NextLink from "next/link";
 export default function Home() {
   useEffect(() => {
     const jssStyles = document.querySelector("#jss-server-side");
@@ -30,16 +32,18 @@ export default function Home() {
           {data.products.map((product) => (
             <Grid item md={4} key={product.name}>
               <Card>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    image={product.image}
-                    title={product.name}
-                  ></CardMedia>
-                  <CardContent>
-                    <Typography>{product.name}</Typography>
-                  </CardContent>
-                </CardActionArea>
+                <NextLink href={`/product/${product.slug}`} passHref>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      image={product.image}
+                      title={product.name}
+                    ></CardMedia>
+                    <CardContent>
+                      <Typography>{product.name}</Typography>
+                    </CardContent>
+                  </CardActionArea>
+                </NextLink>
                 <CardActions>
                   <Typography>${product.price}</Typography>
                   <Button size="small" color="primary">
