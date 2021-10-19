@@ -2,6 +2,7 @@ const data = {
   products: [
     {
       name: "Free Shirt",
+      slug: "free-shirt",
       category: "Shirts",
       image: "/images/shirt1.jpg",
       price: 70,
@@ -13,6 +14,7 @@ const data = {
     },
     {
       name: "Fit Shirt",
+      slug: "fit-shirt",
       category: "Shirts",
       image: "/images/shirt1.jpg",
       price: 50,
@@ -24,6 +26,20 @@ const data = {
     },
     {
       name: "Shirt+",
+      slug: "slim-shirt",
+      category: "Shirts",
+      image: "/images/shirt1.jpg",
+      price: 10,
+      brand: "Nike",
+      rating: 4.0,
+      numReviews: 9,
+      countInStock: 10,
+      description: "A popular shirt",
+    },
+
+    {
+      name: "Shirt+",
+      slug: "shirtplus",
       category: "Shirts",
       image: "/images/shirt1.jpg",
       price: 10,
