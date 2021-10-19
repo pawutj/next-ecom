@@ -12,6 +12,7 @@ import {
   Button,
 } from "@material-ui/core";
 import { data } from "../utils/data";
+import { getCardActionsUtilityClass } from "@mui/material";
 export default function Home() {
   useEffect(() => {
     const jssStyles = document.querySelector("#jss-server-side");
@@ -31,13 +32,18 @@ export default function Home() {
                   <CardMedia
                     component="img"
                     image={product.image}
-                    title={product.title}
+                    title={product.name}
                   ></CardMedia>
+                  <CardContent>
+                    <Typography>{product.name}</Typography>
+                  </CardContent>
                 </CardActionArea>
-                <Typography>${product.price}</Typography>
-                <Button size="small" color="primary">
-                  Add to Cart
-                </Button>
+                <CardActions>
+                  <Typography>${product.price}</Typography>
+                  <Button size="small" color="primary">
+                    Add to Cart
+                  </Button>
+                </CardActions>
               </Card>
             </Grid>
           ))}
