@@ -10,6 +10,8 @@ import {
   CardMedia,
   Typography,
   Button,
+  CardContent,
+  CardActions,
 } from "@material-ui/core";
 import { data } from "../utils/data";
 import { getCardActionsUtilityClass } from "@mui/material";
